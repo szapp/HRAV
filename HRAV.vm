@@ -1,0 +1,21 @@
+[BEGINVDF]
+Comment=Extend the stack trace of access violations to include Daedalus symbols. Gothic 2 only (Gothic 1 incomplete)
+BaseDir=.\
+VDFName=.\HRAV.vdf
+
+[FILES]
+; Resources (list the specific files from _work here)
+; _work\* -r
+
+; Script files
+Ninja\HRAV\* -r
+
+[EXCLUDE]
+_work\Data\Scripts\* -r
+*.vm
+*.vdf
+*.bat
+
+[INCLUDE]
+
+[ENDVDF]
