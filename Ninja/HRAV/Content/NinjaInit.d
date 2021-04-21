@@ -58,13 +58,15 @@ func void Ninja_HRAV_ParseLine() {
     var int stack3;  stack3  = Ninja_HRAV_HexToDec(STR_SubStr(line, 39,  8));
 
     // Check if in Daedalus function (specific to Gothic 2 due to bytes check)
-    var int symbId;
+    var int symbId; symbId = -1;
     var int codeStackPos; codeStackPos = 0;
     var string origin; origin = thisModule;
     pos += 2;
     if (Hlp_StrCmp(STR_SubStr(line, pos, STR_Len(DoStack_Name)), DoStack_Name)) {
         codeStackPos = stack1;
-        symbId = MEM_GetFuncIDByOffset(codeStackPos);
+        if (0 <= codeStackPos) && (codeStackPos < MEM_Parser.stack_stacksize) {
+            symbId = MEM_GetFuncIDByOffset(codeStackPos);
+        };
         origin = "Daedalus";
     } else if (Hlp_StrCmp(STR_SubStr(line, pos, STR_Len(CallFunc_Name)), CallFunc_Name))
            && (stack1 == ContentParserAddress) {
@@ -77,7 +79,7 @@ func void Ninja_HRAV_ParseLine() {
 
     // Get symbol name
     var string location;
-    if (symbId < 0 || symbId >= currSymbolTableLength) {
+    if (symbId < 0) || (symbId >= currSymbolTableLength) {
         location = "[UNKNOWN]";
     } else {
         var zCPar_Symbol symb; symb = _^(MEM_GetSymbolByIndex(symbId));
