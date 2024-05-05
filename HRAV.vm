@@ -1,5 +1,5 @@
 [BEGINVDF]
-Comment=Extend the stack trace of access violations to include Daedalus symbols for Gothic 2 NotR (with partial support for Gothic 1)
+Comment=Human Readable Access Violations: Extend the stack trace of access violations to include Daedalus symbols for Gothic 2 NotR (with partial support for Gothic 1)
 BaseDir=.\
 VDFName=.\HRAV.vdf
 
