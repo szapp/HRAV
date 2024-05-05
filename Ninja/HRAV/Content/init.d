@@ -1,7 +1,7 @@
 /*
  * Convert hexadecimal to decimal
  */
-func int Ninja_HRAV_HexToDec(var string hex) {
+func int Patch_HRAV_HexToDec(var string hex) {
     var zString str; str = _^(_@s(hex));
 
     // Consider the last 4 bytes only
@@ -22,7 +22,7 @@ func int Ninja_HRAV_HexToDec(var string hex) {
 /*
  * Parse and replace stack trace line of access violation report
  */
-func void Ninja_HRAV_ParseLine() {
+func void Patch_HRAV_ParseLine() {
     if (!ESI) {
         return;
     };
@@ -52,26 +52,27 @@ func void Ninja_HRAV_ParseLine() {
     };
 
     // Retrieve addresses/values on the stack
-    var int addr;    addr    = Ninja_HRAV_HexToDec(STR_SubStr(line,  5,  8));
-    var int stack1;  stack1  = Ninja_HRAV_HexToDec(STR_SubStr(line, 17,  8));
-    var int stack2;  stack2  = Ninja_HRAV_HexToDec(STR_SubStr(line, 28,  8));
-    var int stack3;  stack3  = Ninja_HRAV_HexToDec(STR_SubStr(line, 39,  8));
+    var int addr;    addr    = Patch_HRAV_HexToDec(STR_SubStr(line,  5,  8));
+    var int stack1;  stack1  = Patch_HRAV_HexToDec(STR_SubStr(line, 17,  8));
+    var int stack2;  stack2  = Patch_HRAV_HexToDec(STR_SubStr(line, 28,  8));
+    var int stack3;  stack3  = Patch_HRAV_HexToDec(STR_SubStr(line, 39,  8));
 
     // Check if in Daedalus function (specific to Gothic 2 due to bytes check)
     var int symbId; symbId = -1;
     var int codeStackPos; codeStackPos = 0;
     var string origin; origin = thisModule;
     pos += 2;
-    if (Hlp_StrCmp(STR_SubStr(line, pos, STR_Len(DoStack_Name)), DoStack_Name)) {
+    if (Hlp_StrCmp(STR_SubStr(line, pos, STR_Len(Patch_HRAV_DoStack_Name)), Patch_HRAV_DoStack_Name)) {
         codeStackPos = stack1;
         if (0 <= codeStackPos) && (codeStackPos < MEM_Parser.stack_stacksize) {
             symbId = MEM_GetFuncIDByOffset(codeStackPos);
         };
         origin = "Daedalus";
-    } else if (Hlp_StrCmp(STR_SubStr(line, pos, STR_Len(CallFunc_Name)), CallFunc_Name))
+    } else if (Hlp_StrCmp(STR_SubStr(line, pos, STR_Len(Patch_HRAV_CallFunc_Name)), Patch_HRAV_CallFunc_Name))
            && (stack1 == ContentParserAddress) {
         symbId = stack2;
-    } else if (Hlp_StrCmp(STR_SubStr(line, pos, STR_Len(CreateInstance_Name)), CreateInstance_Name)) {
+    } else if (Hlp_StrCmp(STR_SubStr(line, pos, STR_Len(Patch_HRAV_CreateInstance_Name)),
+                          Patch_HRAV_CreateInstance_Name)) {
         symbId = stack3;
     } else {
         return;
@@ -175,5 +176,5 @@ func void Ninja_HRAV_Menu(var int menuPtr) {
     const int zCExceptionHandler__UnhandledExceptionFilter_print_G1 = 4978965; //0x4BF915
     const int zCExceptionHandler__UnhandledExceptionFilter_print_G2 = 5016696; //0x4C8C78
     HookEngineF(MEMINT_SwitchG1G2(zCExceptionHandler__UnhandledExceptionFilter_print_G1,
-                                  zCExceptionHandler__UnhandledExceptionFilter_print_G2), 5, Ninja_HRAV_ParseLine);
+                                  zCExceptionHandler__UnhandledExceptionFilter_print_G2), 5, Patch_HRAV_ParseLine);
 };

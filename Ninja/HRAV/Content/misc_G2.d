@@ -1,6 +1,6 @@
 /*
  * String constants
  */
-const string DoStack_Name        = "zCParser::DoStack";
-const string CallFunc_Name       = "zCParser::CallFunc()+719";
-const string CreateInstance_Name = "zCParser::CreateInstance()+87";
+const string Patch_HRAV_DoStack_Name        = "zCParser::DoStack";
+const string Patch_HRAV_CallFunc_Name       = "zCParser::CallFunc()+719";
+const string Patch_HRAV_CreateInstance_Name = "zCParser::CreateInstance()+87";
