@@ -10,7 +10,7 @@ Human Readable Access Violations: Extend the stack trace of access violations to
 This is a modular modification (a.k.a. patch or add-on) that can be installed and uninstalled at any time and is virtually compatible with any modification.
 It supports <kbd>Gothic 1</kbd> (partially) and <kbd>Gothic II: NotR</kbd>.
 
-###### Generated from [szapp/patch-template](https://github.com/szapp/patch-template).
+<sup>Generated from [szapp/patch-template](https://github.com/szapp/patch-template).</sup>
 
 ## About
 
@@ -60,7 +60,7 @@ The patch is also available on
 
 <table><thead><tr><th>Gothic</th><th>Gothic II: NotR</th></tr></thead>
 <tbody><tr><td><a href="https://www.worldofgothic.de/dl/download_6.htm">Version 1.08k_mod</a></td><td><a href="https://www.worldofgothic.de/dl/download_278.htm">Report version 2.6.0.0</a></td></tr></tbody>
-<tbody><tr><td colspan="2" align="center"><a href="https://github.com/szapp/Ninja">Ninja 2.1.02</a> (or higher)</td></tr></tbody></table>
+<tbody><tr><td colspan="2" align="center"><a href="https://github.com/szapp/Ninja">Ninja 2.1.02</a> or higher</td></tr></tbody></table>
 
 <!--
 
