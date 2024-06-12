@@ -1,4 +1,4 @@
-# HRAV
+# Human Readable Access Violations
 
 [![Scripts](https://github.com/szapp/HRAV/actions/workflows/scripts.yml/badge.svg)](https://github.com/szapp/HRAV/actions/workflows/scripts.yml)
 [![Validation](https://github.com/szapp/HRAV/actions/workflows/validation.yml/badge.svg)](https://github.com/szapp/HRAV/actions/workflows/validation.yml)
