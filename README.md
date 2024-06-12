@@ -3,7 +3,10 @@
 [![Scripts](https://github.com/szapp/HRAV/actions/workflows/scripts.yml/badge.svg)](https://github.com/szapp/HRAV/actions/workflows/scripts.yml)
 [![Validation](https://github.com/szapp/HRAV/actions/workflows/validation.yml/badge.svg)](https://github.com/szapp/HRAV/actions/workflows/validation.yml)
 [![Build](https://github.com/szapp/HRAV/actions/workflows/build.yml/badge.svg)](https://github.com/szapp/HRAV/actions/workflows/build.yml)
-[![GitHub release](https://img.shields.io/github/v/release/szapp/HRAV.svg)](https://github.com/szapp/HRAV/releases/latest)
+[![GitHub release](https://img.shields.io/github/v/release/szapp/HRAV.svg)](https://github.com/szapp/HRAV/releases/latest)  
+[![World of Gothic](https://raw.githubusercontent.com/szapp/patch-template/main/.github/actions/initialization/badges/wog.svg)](https://forum.worldofplayers.de/forum/threads/?p=26774926)
+[![Spine](https://raw.githubusercontent.com/szapp/patch-template/main/.github/actions/initialization/badges/spine.svg)](https://clockwork-origins.com/spine)
+[![Steam workshop](https://img.shields.io/badge/steam-workshop-2a3f5a?logo=steam&labelColor=1b2838)](https://steamcommunity.com/sharedfiles/filedetails/?id=2787341517)
 
 Human Readable Access Violations: Extend the stack trace of access violations to include Daedalus symbols for Gothic 2 NotR (with partial support for Gothic 1).
 
@@ -59,8 +62,8 @@ The patch is also available on
 ### Requirements
 
 <table><thead><tr><th>Gothic</th><th>Gothic II: NotR</th></tr></thead>
-<tbody><tr><td><a href="https://www.worldofgothic.de/dl/download_6.htm">Version 1.08k_mod</a></td><td><a href="https://www.worldofgothic.de/dl/download_278.htm">Report version 2.6.0.0</a></td></tr></tbody>
-<tbody><tr><td colspan="2" align="center"><a href="https://github.com/szapp/Ninja">Ninja 2.1.02</a> or higher</td></tr></tbody></table>
+<tbody><tr><td><a href="https://www.worldofgothic.de/dl/download_34.htm">Version 1.08k_mod</a></td><td><a href="https://www.worldofgothic.de/dl/download_278.htm">Report version 2.6.0.0</a></td></tr></tbody>
+<tbody><tr><td colspan="2" align="center"><a href="https://github.com/szapp/Ninja/wiki#wiki-content">Ninja 2.1.02</a> or higher</td></tr></tbody></table>
 
 <!--
 
